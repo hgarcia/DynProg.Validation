@@ -1,0 +1,439 @@
+@import url(pygment_trac.css);
+/*
+html5doctor.com Reset Stylesheet
+v1.4.1
+2010-03-01
+Author: Richard Clark - http://richclarkdesign.com
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted #000;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*- self-clearing floats ----------*/
+.mod:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/*- fluid images and objects ----------*/
+img,
+object,
+embed {max-width: 100%;}
+
+/*- LET'S GET STARTED!
+----------------------------------------------------------------------*/
+
+body {
+  color: #222222;
+  font-family: Quattrocento, "Times New Roman", serif;
+}
+
+a {
+  color: #555555;
+}
+
+.main-content {
+    background-color: #FAFAFA;
+    margin: 0 auto;
+    max-width: 60%; /*740px;*/
+    padding: 3em;
+    box-shadow: 0 2px 3px rgba(78, 68, 60, 0.3);
+}
+
+.main-footer {
+  /*margin: 0 auto;*/
+  max-width: 100%; /* 740px; */
+  padding-top: 3em;
+  background-color: #445566;
+  color: #FAFAFA;
+}
+
+abbr {
+  cursor: help;
+}
+
+header.main h1{
+  font-family: "Gentium Book Basic", Georgia, serif;
+  color: #777777;
+  margin: 0 auto;
+  font-size: 400%;
+}
+
+nav{
+  margin-bottom: 25px;
+  padding-left: 0.6em;
+}
+
+nav li {
+  display: block;
+  float: left;
+  margin: 2px 10px 2px 0;
+  padding: 3px 0;
+  width: auto;
+}
+
+nav a{
+  color: #445566;
+  letter-spacing: 0.2em;
+  padding-right: 12px;
+  text-decoration: none;
+  font-style: normal;
+}
+ul.auxiliary-nav {
+  margin: 0 auto;
+  max-width: 60%
+}
+ul.auxiliary-nav li {
+  display: block;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1.5em;
+}
+ul.auxiliary-nav li ul {
+  margin-bottom: 1em;
+}
+ul.auxiliary-nav li ul li {
+  font-size: 0.7em;
+  font-family: Quattrocento, "Times New Roman", serif;
+  display: inline;
+}
+ul.auxiliary-nav li ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+.accent-font {
+  color:#E00875;
+}
+aside.resources {
+  background-color: #fff;
+  padding: 1em;
+  border-left: 3px solid #E00875;
+}
+aside.resources h4 {
+  font-style: italic;
+  text-decoration: underline;
+  left: 0;
+  padding-top: 0;
+}
+aside.resources ul li {
+  line-height: 1.4em;
+}
+aside.resources ul li a {
+  font-size: 0.9em;
+  text-decoration: none;
+  font-style: italic;
+}
+article, section.extra {
+  margin-bottom: 2em;
+}
+article header {
+  margin-bottom: 2em;
+}
+article header h2 {
+  font-size: 200%;
+}
+article a, section a, article header h2 {
+  color: #777777;
+}
+article section {
+  padding-left: 1em;
+}
+article footer {
+  text-align: right;
+  line-height: 4em;
+}
+hr {
+  border-bottom: medium dotted;
+  border-top: medium none;
+  clear: both;
+}
+article header h2, article header h2 a {
+  text-decoration: none;
+  font-family: "Gentium Book Basic", Georgia, serif;
+}
+.gist {
+  margin-bottom: 3em;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.4em;
+  padding-bottom: 16px;
+}
+h3, h4, h5, h6 {
+  color: #777777;
+  font-family: "Gentium Book Basic",Georgia,serif;
+  left: -1em;
+  padding-bottom: 0.5em;
+  padding-top: 1.5em;
+  position: relative;
+}
+section h3 a {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.extra p {
+  padding-left: 0;
+}
+footer{
+  text-align: center;
+  clear: both;
+}
+.main-footer footer {
+  padding-top: 3em
+}
+
+.img-float-right {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.img-float-left {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.side-bar-img {
+  margin-right: 1em;
+  display: block;
+  width: 125px;
+}
+
+.palette {
+  border: 0.01em solid #CECECE;
+  display: inline-block;
+  height: 20px;
+  margin: 2px;
+  width: 30px;
+}
+
+article footer a{
+  font-size: 0.8em;
+}
+
+footer p small{
+  font-size: 0.7em;
+}
+
+code {
+  display: block;
+  background-color: #454545;
+  color: #EEE;
+  font-family: "Courier New", Courier, sans-serif;
+  font-size: 1.1em;
+  overflow: auto;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+span.code {
+  font-family: "Courier New", Courier, sans-serif;
+  display: inline;
+  font-size: 0.9em;
+}
+
+article p i, article p blockquote, article p em, article p cite,
+article blockquote, article em, article cite, article i {
+  color: #555555;
+  background-color: #FFFFFF;
+  line-height: 1.4em;
+  padding: 1.5em;
+  display: block;
+}
+
+blockquote, cite {
+  font-style: italic;;
+}
+
+em {
+  font-style: normal;
+  font-family: "Gentium Book Basic", Georgia, serif;
+}
+
+span.by-link{
+  font-size: 0.9em;
+  font-style: italic;
+}
+span.comment-link{
+  font-size: 0.9em;
+  color: #555555;
+}
+img {
+  border: 0;
+}
+img#avatar {
+  padding: 4px;
+  float: left;
+}
+table {
+  width: 80%;
+  border: 2px solid #999999;
+}
+td {
+  border: 1px solid #999999;
+}
+article section ul{
+  display: block;
+  list-style: none inside none;
+  padding-left: 1em;
+}
+
+#disqus_thread {
+  font-family: inherit;
+}
+#dsq-content h3 {
+  font-size: 0.8em;
+}
+#dsq-sort-by, #dsq-pagination {
+  display: none;
+}
+.dsq-trackback-url {
+  font-size: 0.8em;
+}
+/*- optional vanity styles ----------*/
+@media only screen and (min-width: 1200px) {
+  .main-content, ul.auxiliary-nav {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-content, ul.auxiliary-nav {
+    max-width: 80%
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  article {
+    padding: 0 0 0 2%;
+  }
+  article p i, article p blockquote, article p em, article p cite, article i, article blockquote, article em, article cite{
+    margin: 1em 0 0 -5%;
+    padding-bottom: 1em;
+    padding-left: 1em;
+  }
+  aside.resources {
+    margin: 0;
+    padding-left: 1em;
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .main-content {
+    box-shadow: none;
+    max-width: 90%;
+    padding: 1em 3em 1em 1em;
+  }
+  ul.auxiliary-nav {
+    max-width: 90%;
+  }
+  ul.auxiliary-nav li ul {
+    margin-bottom: 0.5em;
+  }
+  article section, p {
+    padding-left: 0;
+  }
+  section.extra h3 {
+    left: 0;
+  }
+}
+@media only screen and (max-width: 565px) {
+  nav li {
+    margin: 0;
+  }
+  .side-bar-img {
+    margin: 0 auto;
+  }
+}
+
+
+
+

@@ -1,74 +1,54 @@
-<!DOCTYPE html>
-<html>
+---
+layout: post
+title: DynProg.Validation
+summary: A validation library for .Net that introduce a simple DSL to make validation of arguments and method calls easier and less annoying.
+---
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Dynprog.validation : A validation library for .Net" />
+### Why?
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+I wrote this library for the first time 6 or 7 years ago and keep re-writting it or enhancing it. I decided it was time to set it free and published in NuGet if for no toher reason that make my own life easier.
 
-    <title>Dynprog.validation</title>
-  </head>
+It's not a replacement for other popular libraries like <span class="code">FluentValidation</span> or  <span class="code">DataAnnotations</span>.
 
-  <body>
+<strong>DynProg.Validation</strong> is intended to replace the countless checks for null argument and argument formatting and provide a simple and easy to use interface.
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/hgarcia/DynProg.Validation">View on GitHub</a>
+It should replace code like this:
 
-          <h1 id="project_title">Dynprog.validation</h1>
-          <h2 id="project_tagline">A validation library for .Net</h2>
+{% highlight csharp %}
+  public string setValue(string key, string value)
+  {
+      if (String.IsNullOrEmpty(key) || key.length < 5 || key.length > 20)
+      {
+          throw new ArgumentException("key");
+      }
+      if (String.IsNullOrEmpty(value))
+      {
+          throw new ArgumentException("value");
+      }
+      // the actual code goes here
+  }
+{% endhighlight %}
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/hgarcia/DynProg.Validation/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/hgarcia/DynProg.Validation/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+with something like this...
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+{% highlight csharp %}
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+  public string setValue(string key, string value)
+  {
+    var validator = new Validator();
+    validator.CheckThat(() => key).IsNotNullOrEmpty()
+        .LengthIsBetween(5, 20);
+    validator.CheckThat(() => value).IsNotNullOrEmpty();
+    validator.Throw();
+    //the actual code goes here
+  }
+{% endhighlight %}
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+It doesn't looks like much but let's take a look at some of the niceties in the API and some of the facilities it provides before makig a decision.
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+### General usage
 
-<h3>Designer Templates</h3>
+### Specific Exception per check
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+### Managing exceptions, throw on first, throw a list or just get the list on hold on it for a while.
 
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Dynprog.validation maintained by <a href="https://github.com/hgarcia">hgarcia</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
