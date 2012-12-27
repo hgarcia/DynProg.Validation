@@ -4,13 +4,11 @@ title: DynProg.Validation
 summary: A validation library for .Net that introduce a simple DSL to make validation of arguments and method calls easier and less annoying.
 ---
 
-h3. Why?
-
-I wrote this library for the first time 6 or 7 years ago and keep re-writting it or enhancing it. I decided it was time to set it free and published in NuGet if for no other reason that make my own life easier.
-
-It's not a replacement for other popular libraries like <span class="code">FluentValidation</span> or  <span class="code">DataAnnotations</span>.
+h3. Why another validation library?
 
 <span class="code">DynProg.Validation</span> is intended to replace the countless checks for null argument and argument formatting and provide a simple and easy to use interface.
+
+It's not a replacement for other popular libraries like <span class="code">FluentValidation</span> or <span class="code">DataAnnotations</span>.
 
 It should replace code like this:
 
@@ -47,12 +45,43 @@ with something like this...
 
 </code></pre>
 
-It doesn't looks like much but let's take a look at some of the niceties in the API and some of the facilities it provides before makig a decision.
+It doesn't looks like much but let's examine some of the niceties in the API and some of the facilities it provides.
 
 h3. General usage
 
+We create a validator instance per method and you call the <span class="code">CheckThat</span> method. This method takes a <span class="code">func</span> that access and returns the parameter that we want to check.
+
+This is a little weird but the reason is that we use this to internally get the name of the parameter that in turn we use to generate the Exception message. This save you of passing a string with the parameter name that can get out of sync at the first refactoring of your code.
+
+The <span class="code">CheckThat</span> method returns one of many <span class="code">CheckConditions</span> based on the type of the parameter. 
+
+These <span class="code">CheckConditions</span> expose a series of method suitable to check multiple aspects of the parameter.
+
+You can chain multiple conditions together to check several attributes of the parameter.
+
 h3. Specific Exception per check
+
+All methods of the <span class="code">CheckConditions</span> have a "typeless" interface that will generate a generic Exception based on what condition is checking, parameter type and name. 
+
+They also have a "Generic" interface that take an Exception type. This interface takes the same parameters of the "typeless" one plus an array of object as the arguments that Exception type is expecting.
 
 h3. Managing exceptions.
 
-Throw on first, throw a list or just get the list on hold on it for a while.
+Although (at the moment) the validation is run on runtime no Exceptions will be thrown or values returned unless you call one of the following methods.
+
+* List()
+* Throw()
+* Throw<T>()
+* ThrowFirst()
+
+These methods can be called on an instance of the <span class="code">Validator</span> object or in any of the <span class="code">CheckConditions</span>.
+
+The <span class="code">ThrowFirst</span> method will throw the first exception in case one or more exceptions where found. 
+
+The <span class="code">Throw</span> method will throw an <span class="code">ErrorsCollectionException</span> if at least one error was found.
+
+<span class="code">ErrorsCollectionException</span> inherits from <span classs="code">Exception</span> and contains methods to access the list of exceptions generated during validation.
+
+The <span class="code">Throw<T></span> method will throw an <span class="code">Exception</span> of type <span class="code">T</span> if at least one error was found.
+
+Finally <span class="code">List</span> will return the <span class="code">ErrorsCollectionException</span> even if empty.
