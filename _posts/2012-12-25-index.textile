@@ -85,3 +85,9 @@ The <span class="code">Throw</span> method will throw an <span class="code">Erro
 The <span class="code">Throw<T></span> method will throw an <span class="code">Exception</span> of type <span class="code">T</span> if at least one error was found.
 
 Finally <span class="code">List</span> will return the <span class="code">ErrorsCollectionException</span> even if empty.
+
+h3. Installing and getting the code
+
+You can install via "NuGet":http://nuget.org/packages/DynProg.Validation inside VS using the Nuget Package Manager.
+
+You can also "download the code from Github":https://github.com/hgarcia/DynProg.Validation/archive/master.zip and build in your machine. 
