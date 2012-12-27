@@ -37,20 +37,20 @@ h3. Generic methods
 
 __All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
 
-public CheckNameValueCollectionCondition ContainsKeys<E>(string[] keys, object[] exceptionArguments) where E : Exception
+public CheckNameValueCollectionCondition ContainsKeys&lt;E&gt;(string[] keys, object[] exceptionArguments) where E : Exception
 
-public CheckNameValueCollectionCondition CountIsBetween<E>(int lowerBound, int upperBound, object[] exceptionArguments) where E : Exception
+public CheckNameValueCollectionCondition CountIsBetween&lt;E&gt;(int lowerBound, int upperBound, object[] exceptionArguments) where E : Exception
 
-public CheckNameValueCollectionCondition CountIsEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+public CheckNameValueCollectionCondition CountIsEqualTo&lt;E&gt;(int size, object[] exceptionArguments) where E : Exception
 
-public CheckNameValueCollectionCondition CountIsLessOrEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+public CheckNameValueCollectionCondition CountIsLessOrEqualTo&lt;E&gt;(int size, object[] exceptionArguments) where E : Exception
 
-public CheckNameValueCollectionCondition CountIsLessThan<E>(int size, object[] exceptionArguments) where E : Exception
+public CheckNameValueCollectionCondition CountIsLessThan&lt;E&gt;(int size, object[] exceptionArguments) where E : Exception
 
-public CheckNameValueCollectionCondition CountIsMoreOrEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+public CheckNameValueCollectionCondition CountIsMoreOrEqualTo&lt;E&gt;(int size, object[] exceptionArguments) where E : Exception
 
-public CheckNameValueCollectionCondition CountIsMoreThan<E>(int size, object[] exceptionArguments) where E : Exception
+public CheckNameValueCollectionCondition CountIsMoreThan&lt;E&gt;(int size, object[] exceptionArguments) where E : Exception
 
-public CheckNameValueCollectionCondition IsNotNull<E>(object[] exceptionArguments) where E : Exception
+public CheckNameValueCollectionCondition IsNotNull&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-public CheckNameValueCollectionCondition IsNull<E>(object[] exceptionArguments) where E : Exception
+public CheckNameValueCollectionCondition IsNull&lt;E&gt;(object[] exceptionArguments) where E : Exception

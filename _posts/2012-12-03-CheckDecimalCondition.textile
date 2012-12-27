@@ -24,14 +24,14 @@ h3. Generic methods
 
 __All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
 
-CheckDecimalCondition IsBetween<E>(decimal lowerBound, decimal upperBound, object[] exceptionArguments) where E : Exception
+CheckDecimalCondition IsBetween&lt;E&gt;(decimal lowerBound, decimal upperBound, object[] exceptionArguments) where E : Exception
 
-CheckDecimalCondition IsEqualTo<E>(decimal compareValue, object[] exceptionArguments) where E : Exception
+CheckDecimalCondition IsEqualTo&lt;E&gt;(decimal compareValue, object[] exceptionArguments) where E : Exception
 
-CheckDecimalCondition IsLessOrEqualTo<E>(decimal compareValue, object[] exceptionArguments) where E : Exception
+CheckDecimalCondition IsLessOrEqualTo&lt;E&gt;(decimal compareValue, object[] exceptionArguments) where E : Exception
 
-CheckDecimalCondition IsLessThan<E>(decimal compareValue, object[] exceptionArguments) where E : Exception
+CheckDecimalCondition IsLessThan&lt;E&gt;(decimal compareValue, object[] exceptionArguments) where E : Exception
 
-CheckDecimalCondition IsMoreOrEqualTo<E>(decimal compareValue, object[] exceptionArguments) where E : Exception
+CheckDecimalCondition IsMoreOrEqualTo&lt;E&gt;(decimal compareValue, object[] exceptionArguments) where E : Exception
 
-CheckDecimalCondition IsMoreThan<E>(decimal compareValue, object[] exceptionArguments) where E : Exception
+CheckDecimalCondition IsMoreThan&lt;E&gt;(decimal compareValue, object[] exceptionArguments) where E : Exception

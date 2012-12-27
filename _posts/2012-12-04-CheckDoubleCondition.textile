@@ -24,14 +24,14 @@ h3. Generic methods
 
 __All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
 
-CheckDoubleCondition IsBetween<E>(double lowerBound, double upperBound, object[] exceptionArguments) where E : Exception
+CheckDoubleCondition IsBetween&lt;E&gt;(double lowerBound, double upperBound, object[] exceptionArguments) where E : Exception
 
-CheckDoubleCondition IsEqualTo<E>(double compareValue, object[] exceptionArguments) where E : Exception
+CheckDoubleCondition IsEqualTo&lt;E&gt;(double compareValue, object[] exceptionArguments) where E : Exception
 
-CheckDoubleCondition IsLessOrEqualTo<E>(double compareValue, object[] exceptionArguments) where E : Exception
+CheckDoubleCondition IsLessOrEqualTo&lt;E&gt;(double compareValue, object[] exceptionArguments) where E : Exception
 
-CheckDoubleCondition IsLessThan<E>(double compareValue, object[] exceptionArguments) where E : Exception
+CheckDoubleCondition IsLessThan&lt;E&gt;(double compareValue, object[] exceptionArguments) where E : Exception
 
-CheckDoubleCondition IsMoreOrEqualTo<E>(double compareValue, object[] exceptionArguments) where E : Exception
+CheckDoubleCondition IsMoreOrEqualTo&lt;E&gt;(double compareValue, object[] exceptionArguments) where E : Exception
 
-CheckDoubleCondition IsMoreThan<E>(double compareValue, object[] exceptionArguments) where E : Exception
+CheckDoubleCondition IsMoreThan&lt;E&gt;(double compareValue, object[] exceptionArguments) where E : Exception

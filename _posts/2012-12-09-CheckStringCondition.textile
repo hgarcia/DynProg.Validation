@@ -68,40 +68,40 @@ h3. Generic methods
 
 __All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
 
-CheckStringCondition CanConvertToBool<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition CanConvertToBool&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition CanConvertToInt32<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition CanConvertToInt32&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition HasNoSpaces<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition HasNoSpaces&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition IsEmail<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition IsEmail&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition IsEmpty<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition IsEmpty&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition IsOneOf<E>(string[] options, object[] exceptionArguments) where E : Exception
+CheckStringCondition IsOneOf&lt;E&gt;(string[] options, object[] exceptionArguments) where E : Exception
 
-CheckStringCondition IsNotEmpty<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition IsNotEmpty&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition IsNotNull<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition IsNotNull&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition IsNotNullOrEmpty<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition IsNotNullOrEmpty&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition IsNull<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition IsNull&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition IsNullOrEmpty<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition IsNullOrEmpty&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition IsUrl<E>(object[] exceptionArguments) where E : Exception
+CheckStringCondition IsUrl&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckStringCondition LengthEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+CheckStringCondition LengthEqualTo&lt;E&gt;(int size, object[] exceptionArguments) where E : Exception
 
-CheckStringCondition LengthIsBetween<E>(int minimumSize, int maximumSize, object[] exceptionArguments) where E : Exception
+CheckStringCondition LengthIsBetween&lt;E&gt;(int minimumSize, int maximumSize, object[] exceptionArguments) where E : Exception
 
-CheckStringCondition LengthLessOrEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+CheckStringCondition LengthLessOrEqualTo&lt;E&gt;(int size, object[] exceptionArguments) where E : Exception
 
-CheckStringCondition LengthLessThan<E>(int size, object[] exceptionArguments) where E : Exception
+CheckStringCondition LengthLessThan&lt;E&gt;(int size, object[] exceptionArguments) where E : Exception
 
-CheckStringCondition LengthMoreOrEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+CheckStringCondition LengthMoreOrEqualTo&lt;E&gt;(int size, object[] exceptionArguments) where E : Exception
 
-CheckStringCondition LengthMoreThan<E>(int size, object[] exceptionArguments) where E : Exception
+CheckStringCondition LengthMoreThan&lt;E&gt;(int size, object[] exceptionArguments) where E : Exception
 
-CheckStringCondition Match<E>(string pattern, object[] exceptionArguments) where E : Exception
+CheckStringCondition Match&lt;E&gt;(string pattern, object[] exceptionArguments) where E : Exception

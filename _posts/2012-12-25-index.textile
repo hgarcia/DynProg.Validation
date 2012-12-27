@@ -71,7 +71,7 @@ Although (at the moment) the validation is run on runtime no Exceptions will be 
 
 * List()
 * Throw()
-* Throw<T>()
+* Throw&lt;T&gt;()
 * ThrowFirst()
 
 These methods can be called on an instance of the <span class="code">Validator</span> object or in any of the <span class="code">CheckConditions</span>.
@@ -82,7 +82,7 @@ The <span class="code">Throw</span> method will throw an <span class="code">Erro
 
 <span class="code">ErrorsCollectionException</span> inherits from <span classs="code">Exception</span> and contains methods to access the list of exceptions generated during validation.
 
-The <span class="code">Throw<T></span> method will throw an <span class="code">Exception</span> of type <span class="code">T</span> if at least one error was found.
+The <span class="code">Throw&lt;T&gt;</span> method will throw an <span class="code">Exception</span> of type <span class="code">T</span> if at least one error was found.
 
 Finally <span class="code">List</span> will return the <span class="code">ErrorsCollectionException</span> even if empty.
 

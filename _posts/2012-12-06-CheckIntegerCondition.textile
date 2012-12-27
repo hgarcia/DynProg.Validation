@@ -24,14 +24,14 @@ h3. Generic methods
 
 __All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
 
-CheckIntegerCondition IsBetween<E>(int lowerBound, int upperBound, object[] exceptionArguments) where E : Exception
+CheckIntegerCondition IsBetween&lt;E&gt;(int lowerBound, int upperBound, object[] exceptionArguments) where E : Exception
 
-CheckIntegerCondition IsEqualTo<E>(int compareValue, object[] exceptionArguments) where E : Exception
+CheckIntegerCondition IsEqualTo&lt;E&gt;(int compareValue, object[] exceptionArguments) where E : Exception
 
-CheckIntegerCondition IsLessOrEqualTo<E>(int compareValue, object[] exceptionArguments) where E : Exception
+CheckIntegerCondition IsLessOrEqualTo&lt;E&gt;(int compareValue, object[] exceptionArguments) where E : Exception
 
-CheckIntegerCondition IsLessThan<E>(int compareValue, object[] exceptionArguments) where E : Exception
+CheckIntegerCondition IsLessThan&lt;E&gt;(int compareValue, object[] exceptionArguments) where E : Exception
 
-CheckIntegerCondition IsMoreOrEqualTo<E>(int compareValue, object[] exceptionArguments) where E : Exception
+CheckIntegerCondition IsMoreOrEqualTo&lt;E&gt;(int compareValue, object[] exceptionArguments) where E : Exception
 
-CheckIntegerCondition IsMoreThan<E>(int compareValue, object[] exceptionArguments) where E : Exception
+CheckIntegerCondition IsMoreThan&lt;E&gt;(int compareValue, object[] exceptionArguments) where E : Exception

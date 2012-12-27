@@ -24,14 +24,14 @@ h3. Generic methods
 
 __All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
 
-CheckDateTimeCondition IsAfter<E>(DateTime dateTime, object[] exceptionArguments) where E : Exception
+CheckDateTimeCondition IsAfter&lt;E&gt;(DateTime dateTime, object[] exceptionArguments) where E : Exception
 
-CheckDateTimeCondition IsAfterOrEqualTo<E>(DateTime dateTime, object[] exceptionArguments) where E : Exception
+CheckDateTimeCondition IsAfterOrEqualTo&lt;E&gt;(DateTime dateTime, object[] exceptionArguments) where E : Exception
 
-CheckDateTimeCondition IsBefore<E>(DateTime dateTime, object[] exceptionArguments) where E : Exception
+CheckDateTimeCondition IsBefore&lt;E&gt;(DateTime dateTime, object[] exceptionArguments) where E : Exception
 
-CheckDateTimeCondition IsBeforeOrEqualTo<E>(DateTime dateTime, object[] exceptionArguments) where E : Exception
+CheckDateTimeCondition IsBeforeOrEqualTo&lt;E&gt;(DateTime dateTime, object[] exceptionArguments) where E : Exception
 
-CheckDateTimeCondition IsBetween<E>(DateTime beforeDate, DateTime afterDate, object[] exceptionArguments) where E : Exception
+CheckDateTimeCondition IsBetween&lt;E&gt;(DateTime beforeDate, DateTime afterDate, object[] exceptionArguments) where E : Exception
 
-CheckDateTimeCondition IsEqualTo<E>(DateTime dateTime, object[] exceptionArguments) where E : Exception
+CheckDateTimeCondition IsEqualTo&lt;E&gt;(DateTime dateTime, object[] exceptionArguments) where E : Exception

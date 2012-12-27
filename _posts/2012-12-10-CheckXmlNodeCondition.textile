@@ -28,14 +28,14 @@ h3. Generic Methods
 
 __All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
 
-CheckXmlNodeCondition HasAttributes<E>(object[] exceptionArguments) where E : Exception
+CheckXmlNodeCondition HasAttributes&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckXmlNodeCondition HasAttributeWithName<E>(string attributeName, object[] exceptionArguments) where E : Exception
+CheckXmlNodeCondition HasAttributeWithName&lt;E&gt;(string attributeName, object[] exceptionArguments) where E : Exception
 
-CheckXmlNodeCondition HasChildNodes<E>(object[] exceptionArguments) where E : Exception
+CheckXmlNodeCondition HasChildNodes&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckXmlNodeCondition HasChildNode<E>(string xpath, object[] exceptionArguments) where E : Exception
+CheckXmlNodeCondition HasChildNode&lt;E&gt;(string xpath, object[] exceptionArguments) where E : Exception
 
-CheckXmlNodeCondition IsNotNull<E>(object[] exceptionArguments) where E : Exception
+CheckXmlNodeCondition IsNotNull&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckXmlNodeCondition IsNull<E>(object[] exceptionArguments) where E : Exception
+CheckXmlNodeCondition IsNull&lt;E&gt;(object[] exceptionArguments) where E : Exception

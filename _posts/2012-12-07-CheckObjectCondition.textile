@@ -19,8 +19,8 @@ h3. Generic methods
 
 __All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
 
-CheckObjectCondition IsInstanceOf<E>(Type type,object[] exceptionArguments) where E : Exception
+CheckObjectCondition IsInstanceOf&lt;E&gt;(Type type,object[] exceptionArguments) where E : Exception
 
-CheckObjectCondition IsNotNull<E>(object[] exceptionArguments) where E : Exception
+CheckObjectCondition IsNotNull&lt;E&gt;(object[] exceptionArguments) where E : Exception
 
-CheckObjectCondition IsNull<E>(object[] exceptionArguments) where E : Exception
+CheckObjectCondition IsNull&lt;E&gt;(object[] exceptionArguments) where E : Exception
