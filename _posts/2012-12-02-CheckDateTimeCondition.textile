@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Api - CheckDateTimeCondition
+title: CheckDateTimeCondition
 summary: CheckCondition for the DateTime type.
 ---
 

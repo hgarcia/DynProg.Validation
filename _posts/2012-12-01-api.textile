@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Api - Validator
+title: Validator
 summary: Api documentation.
 ---
 
