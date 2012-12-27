@@ -1,0 +1,26 @@
+---
+layout: post
+title: Api - CheckObjectCondition
+summary: CheckCondition for any Object.
+---
+
+h3. Methods
+
+CheckObjectCondition IsInstanceOf(Type type)
+__Generates a InvalidCastException__
+
+CheckObjectCondition IsNotNull()
+__Generates a NullReferenceException__
+
+CheckObjectCondition IsNull()
+__Generates a NotNullException__
+
+h3. Generic methods
+
+__All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
+
+CheckObjectCondition IsInstanceOf<E>(Type type,object[] exceptionArguments) where E : Exception
+
+CheckObjectCondition IsNotNull<E>(object[] exceptionArguments) where E : Exception
+
+CheckObjectCondition IsNull<E>(object[] exceptionArguments) where E : Exception

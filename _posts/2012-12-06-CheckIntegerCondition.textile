@@ -1,0 +1,37 @@
+---
+layout: post
+title: Api - CheckIntegerCondition
+summary: CheckCondition for the Integer type.
+---
+
+h3. Methods
+
+__All the methods generate an InvalidSizeException with a message detailing the problem according to the check performed.__
+
+CheckIntegerCondition IsBetween(int lowerBound, int upperBound)
+
+CheckIntegerCondition IsEqualTo(int compareValue)
+
+CheckIntegerCondition IsLessOrEqualTo(int compareValue)
+
+CheckIntegerCondition IsLessThan(int compareValue)
+
+CheckIntegerCondition IsMoreOrEqualTo(int compareValue)
+
+CheckIntegerCondition IsMoreThan(int compareValue)
+
+h3. Generic methods
+
+__All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
+
+CheckIntegerCondition IsBetween<E>(int lowerBound, int upperBound, object[] exceptionArguments) where E : Exception
+
+CheckIntegerCondition IsEqualTo<E>(int compareValue, object[] exceptionArguments) where E : Exception
+
+CheckIntegerCondition IsLessOrEqualTo<E>(int compareValue, object[] exceptionArguments) where E : Exception
+
+CheckIntegerCondition IsLessThan<E>(int compareValue, object[] exceptionArguments) where E : Exception
+
+CheckIntegerCondition IsMoreOrEqualTo<E>(int compareValue, object[] exceptionArguments) where E : Exception
+
+CheckIntegerCondition IsMoreThan<E>(int compareValue, object[] exceptionArguments) where E : Exception

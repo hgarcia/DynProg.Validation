@@ -1,0 +1,37 @@
+---
+layout: post
+title: Api - CheckDoubleCondition
+summary: CheckCondition for the Double type.
+---
+
+h3. Methods
+
+__All the methods generate an InvalidSizeException with a message detailing the problem according to the check performed.__
+
+CheckDoubleCondition IsBetween(double lowerBound, double upperBound)
+
+CheckDoubleCondition IsEqualTo(double compareValue)
+
+CheckDoubleCondition IsLessOrEqualTo(double compareValue)
+
+CheckDoubleCondition IsLessThan(double compareValue)
+
+CheckDoubleCondition IsMoreOrEqualTo(double compareValue)
+
+CheckDoubleCondition IsMoreThan(double compareValue)
+
+h3. Generic methods
+
+__All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
+
+CheckDoubleCondition IsBetween<E>(double lowerBound, double upperBound, object[] exceptionArguments) where E : Exception
+
+CheckDoubleCondition IsEqualTo<E>(double compareValue, object[] exceptionArguments) where E : Exception
+
+CheckDoubleCondition IsLessOrEqualTo<E>(double compareValue, object[] exceptionArguments) where E : Exception
+
+CheckDoubleCondition IsLessThan<E>(double compareValue, object[] exceptionArguments) where E : Exception
+
+CheckDoubleCondition IsMoreOrEqualTo<E>(double compareValue, object[] exceptionArguments) where E : Exception
+
+CheckDoubleCondition IsMoreThan<E>(double compareValue, object[] exceptionArguments) where E : Exception

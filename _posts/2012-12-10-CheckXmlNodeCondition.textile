@@ -1,0 +1,41 @@
+---
+layout: post
+title: Api - CheckXmlNodeCondition
+summary: CheckCondition for the XmlNode type.
+---
+
+h3. Methods
+
+CheckXmlNodeCondition HasAttributes()
+__Generates an EmptyCollectionException__
+
+CheckXmlNodeCondition HasAttributeWithName(string attributeName)
+__Generates an NullReferenceException__
+
+CheckXmlNodeCondition HasChildNodes()
+__Generates an EmptyCollectionException__
+
+CheckXmlNodeCondition HasChildNode(string xpath)
+__Generates an EmptyCollectionException__
+
+CheckXmlNodeCondition IsNotNull()
+__Generates an NullReferenceException__
+
+CheckXmlNodeCondition IsNull()
+__Generates an NotNullException__
+
+h3. Generic Methods
+
+__All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
+
+CheckXmlNodeCondition HasAttributes<E>(object[] exceptionArguments) where E : Exception
+
+CheckXmlNodeCondition HasAttributeWithName<E>(string attributeName, object[] exceptionArguments) where E : Exception
+
+CheckXmlNodeCondition HasChildNodes<E>(object[] exceptionArguments) where E : Exception
+
+CheckXmlNodeCondition HasChildNode<E>(string xpath, object[] exceptionArguments) where E : Exception
+
+CheckXmlNodeCondition IsNotNull<E>(object[] exceptionArguments) where E : Exception
+
+CheckXmlNodeCondition IsNull<E>(object[] exceptionArguments) where E : Exception

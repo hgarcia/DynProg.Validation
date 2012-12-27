@@ -1,0 +1,107 @@
+---
+layout: post
+title: Api - CheckStringCondition
+summary: CheckCondition for the String type.
+---
+
+h3. Methods
+
+CheckStringCondition CanConvertToBool()
+__Generates a FormatException__
+
+public CheckStringCondition CanConvertToInt32()
+__Generates a FormatException or an OverflowException__
+
+CheckStringCondition HasNoSpaces()
+__Generates an InvalidFormatException__
+
+CheckStringCondition IsEmail()
+__Generates an InvalidFormatException__
+
+CheckStringCondition IsEmpty()
+__Generates an NotEmptyStringException__
+
+CheckStringCondition IsOneOf(string[] options)
+__Generates an MatchNotFoundException__
+
+CheckStringCondition IsNotEmpty()
+__Generates an EmptyStringException__
+
+CheckStringCondition IsNotNull()
+__Generates an NullReferenceException__
+
+CheckStringCondition IsNotNullOrEmpty()
+__Generates an NullOrEmptyStringException__
+
+CheckStringCondition IsNull()
+__Generates an NotNullException__
+
+CheckStringCondition IsNullOrEmpty()
+__Generates an NotNullOrEmptyStringException__
+
+CheckStringCondition IsUrl()
+__Generates an InvalidFormatException__
+
+CheckStringCondition LengthEqualTo(int size)
+__Generates an InvalidSizeException__
+
+CheckStringCondition LengthIsBetween(int minimumSize, int maximumSize)
+__Generates an InvalidSizeException__
+
+CheckStringCondition LengthLessOrEqualTo(int size)
+__Generates an InvalidSizeException__
+
+CheckStringCondition LengthLessThan(int size)
+__Generates an InvalidSizeException__
+
+CheckStringCondition LengthMoreOrEqualTo(int size)
+__Generates an InvalidSizeException__
+
+CheckStringCondition LengthMoreThan(int size)
+__Generates an InvalidSizeException__
+
+CheckStringCondition Match(string pattern)
+__Generates an InvalidFormatException__
+
+
+h3. Generic methods
+
+__All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
+
+CheckStringCondition CanConvertToBool<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition CanConvertToInt32<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition HasNoSpaces<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition IsEmail<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition IsEmpty<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition IsOneOf<E>(string[] options, object[] exceptionArguments) where E : Exception
+
+CheckStringCondition IsNotEmpty<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition IsNotNull<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition IsNotNullOrEmpty<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition IsNull<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition IsNullOrEmpty<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition IsUrl<E>(object[] exceptionArguments) where E : Exception
+
+CheckStringCondition LengthEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+
+CheckStringCondition LengthIsBetween<E>(int minimumSize, int maximumSize, object[] exceptionArguments) where E : Exception
+
+CheckStringCondition LengthLessOrEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+
+CheckStringCondition LengthLessThan<E>(int size, object[] exceptionArguments) where E : Exception
+
+CheckStringCondition LengthMoreOrEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+
+CheckStringCondition LengthMoreThan<E>(int size, object[] exceptionArguments) where E : Exception
+
+CheckStringCondition Match<E>(string pattern, object[] exceptionArguments) where E : Exception

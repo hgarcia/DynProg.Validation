@@ -1,0 +1,37 @@
+---
+layout: post
+title: Api - CheckDecimalCondition
+summary: CheckCondition for the Decimal type.
+---
+
+h3. Methods
+
+__All the methods generate an InvalidSizeException with a message detailing the problem according to the check performed.__
+
+CheckDecimalCondition IsBetween(decimal lowerBound, decimal upperBound)
+
+CheckDecimalCondition IsEqualTo(decimal compareValue)
+
+CheckDecimalCondition IsLessOrEqualTo(decimal compareValue)
+
+CheckDecimalCondition IsLessThan(decimal compareValue)
+
+CheckDecimalCondition IsMoreOrEqualTo(decimal compareValue)
+
+CheckDecimalCondition IsMoreThan(decimal compareValue)
+
+h3. Generic methods
+
+__All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
+
+CheckDecimalCondition IsBetween<E>(decimal lowerBound, decimal upperBound, object[] exceptionArguments) where E : Exception
+
+CheckDecimalCondition IsEqualTo<E>(decimal compareValue, object[] exceptionArguments) where E : Exception
+
+CheckDecimalCondition IsLessOrEqualTo<E>(decimal compareValue, object[] exceptionArguments) where E : Exception
+
+CheckDecimalCondition IsLessThan<E>(decimal compareValue, object[] exceptionArguments) where E : Exception
+
+CheckDecimalCondition IsMoreOrEqualTo<E>(decimal compareValue, object[] exceptionArguments) where E : Exception
+
+CheckDecimalCondition IsMoreThan<E>(decimal compareValue, object[] exceptionArguments) where E : Exception

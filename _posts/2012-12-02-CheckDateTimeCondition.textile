@@ -1,0 +1,37 @@
+---
+layout: post
+title: Api - CheckDateTimeCondition
+summary: CheckCondition for the DateTime type.
+---
+
+h3. Methods
+
+__All the methods generate an InvalidValueException with a message detailing the problem according to the check performed.__
+
+CheckDateTimeCondition IsAfter(DateTime dateTime)
+
+CheckDateTimeCondition IsAfterOrEqualTo(DateTime dateTime)
+
+CheckDateTimeCondition IsBefore(DateTime dateTime)
+
+CheckDateTimeCondition IsBeforeOrEqualTo(DateTime dateTime)
+
+CheckDateTimeCondition IsBetween(DateTime beforeDate, DateTime afterDate)
+
+CheckDateTimeCondition IsEqualTo(DateTime dateTime)
+
+h3. Generic methods
+
+__All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
+
+CheckDateTimeCondition IsAfter<E>(DateTime dateTime, object[] exceptionArguments) where E : Exception
+
+CheckDateTimeCondition IsAfterOrEqualTo<E>(DateTime dateTime, object[] exceptionArguments) where E : Exception
+
+CheckDateTimeCondition IsBefore<E>(DateTime dateTime, object[] exceptionArguments) where E : Exception
+
+CheckDateTimeCondition IsBeforeOrEqualTo<E>(DateTime dateTime, object[] exceptionArguments) where E : Exception
+
+CheckDateTimeCondition IsBetween<E>(DateTime beforeDate, DateTime afterDate, object[] exceptionArguments) where E : Exception
+
+CheckDateTimeCondition IsEqualTo<E>(DateTime dateTime, object[] exceptionArguments) where E : Exception

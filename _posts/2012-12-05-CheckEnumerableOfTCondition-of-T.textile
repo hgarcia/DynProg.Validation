@@ -1,0 +1,69 @@
+
+---
+layout: post
+title: Api - CheckEnumerableOfTCondition
+summary: CheckCondition for an Enumerable of T type.
+---
+
+h3. Methods
+
+CheckEnumerableOfTCondition<T> Contains(T value)
+__Generate a IndexOutOfRangeException exception__
+
+CheckEnumerableOfTCondition<T> Contains(IEnumerable<T> values)
+__Generate a IndexOutOfRangeException exception__
+    
+CheckEnumerableOfTCondition<T> CountIsBetween(int lowerBound, int upperBound)
+__Generates an InvalidSizeException exception__
+
+CheckEnumerableOfTCondition<T> CountIsEqualTo(int size)
+__Generates an InvalidSizeException exception__
+
+CheckEnumerableOfTCondition<T> CountIsLessOrEqualTo(int size)
+__Generates an InvalidSizeException exception__
+
+CheckEnumerableOfTCondition<T> CountIsLessThan(int size)
+__Generates an InvalidSizeException exception__
+
+CheckEnumerableOfTCondition<T> CountIsMoreOrEqualTo(int size)
+__Generates an InvalidSizeException exception__
+
+CheckEnumerableOfTCondition<T> CountIsMoreThan(int size)
+__Generates an InvalidSizeException exception__
+
+CheckEnumerableOfTCondition<T> IsNotNull()
+__Generates a NullReferenceException exception__
+
+CheckEnumerableOfTCondition<T> IsNull()
+__Generates a NotNullException exception__
+
+h3. Generic methods
+
+__All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
+
+CheckEnumerableOfTCondition<T> CountIsBetween<E>(int lowerBound, int upperBound,
+                                                        object[] exceptionArguments) where E : Exception
+
+CheckEnumerableOfTCondition<T> CountIsEqualTo<E>(int size, object[] exceptionArguments)
+    where E : Exception
+
+CheckEnumerableOfTCondition<T> CountIsLessOrEqualTo<E>(int size, object[] exceptionArguments)
+    where E : Exception
+
+CheckEnumerableOfTCondition<T> CountIsLessThan<E>(int size, object[] exceptionArguments)
+    where E : Exception
+
+CheckEnumerableOfTCondition<T> CountIsMoreOrEqualTo<E>(int size, object[] exceptionArguments)
+
+CheckEnumerableOfTCondition<T> CountIsMoreThan<E>(int size, object[] exceptionArguments)
+    where E : Exception
+    where E : Exception
+
+CheckEnumerableOfTCondition<T> Contains<E>(T value, object[] exceptionArguments) where E : Exception
+
+CheckEnumerableOfTCondition<T> Contains<E>(IEnumerable<T> values, object[] exceptionArguments)
+    where E : Exception
+
+CheckEnumerableOfTCondition<T> IsNotNull<E>(object[] exceptionArguments) where E : Exception
+
+CheckEnumerableOfTCondition<T> IsNull<E>(object[] exceptionArguments) where E : Exception

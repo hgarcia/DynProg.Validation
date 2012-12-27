@@ -1,0 +1,56 @@
+---
+layout: post
+title: Api - CheckNameValueCollectionCondition
+summary: CheckCondition for the Integer type.
+---
+
+h3. Methods
+
+public CheckNameValueCollectionCondition ContainsKeys(string[] keys)
+__Generates an IndexOutOfRangeException__
+
+public CheckNameValueCollectionCondition CountIsBetween(int lowerBound, int upperBound)
+__Generates an InvalidSizeException__
+
+public CheckNameValueCollectionCondition CountIsEqualTo(int size)
+__Generates an InvalidSizeException__
+
+public CheckNameValueCollectionCondition CountIsLessOrEqualTo(int size)
+__Generates an InvalidSizeException__
+
+public CheckNameValueCollectionCondition CountIsLessThan(int size)
+__Generates an InvalidSizeException__
+
+public CheckNameValueCollectionCondition CountIsMoreOrEqualTo(int size)
+__Generates an InvalidSizeException__
+
+public CheckNameValueCollectionCondition CountIsMoreThan(int size)
+__Generates an InvalidSizeException__
+
+public CheckNameValueCollectionCondition IsNotNull()
+__Generates an NullReferenceException__
+
+public CheckNameValueCollectionCondition IsNull()
+__Generates an NotNullException__
+
+h3. Generic methods
+
+__All generic methods will generate an Exception of type E. E must inherit from Exception. This methods always take an array of objects with the parameters for E.__
+
+public CheckNameValueCollectionCondition ContainsKeys<E>(string[] keys, object[] exceptionArguments) where E : Exception
+
+public CheckNameValueCollectionCondition CountIsBetween<E>(int lowerBound, int upperBound, object[] exceptionArguments) where E : Exception
+
+public CheckNameValueCollectionCondition CountIsEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+
+public CheckNameValueCollectionCondition CountIsLessOrEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+
+public CheckNameValueCollectionCondition CountIsLessThan<E>(int size, object[] exceptionArguments) where E : Exception
+
+public CheckNameValueCollectionCondition CountIsMoreOrEqualTo<E>(int size, object[] exceptionArguments) where E : Exception
+
+public CheckNameValueCollectionCondition CountIsMoreThan<E>(int size, object[] exceptionArguments) where E : Exception
+
+public CheckNameValueCollectionCondition IsNotNull<E>(object[] exceptionArguments) where E : Exception
+
+public CheckNameValueCollectionCondition IsNull<E>(object[] exceptionArguments) where E : Exception
