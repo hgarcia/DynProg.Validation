@@ -7,23 +7,23 @@ summary: Api documentation.
 h3. Methods
 
 
-"CheckDateTimeCondition":{{site.url}}/2012/12/02-CheckDateTimeCondition.html CheckThat(Func&lt;DateTime&gt; dateTimeToCheck)
+"CheckDateTimeCondition":{{site.url}}/2012/12/02/CheckDateTimeCondition.html CheckThat(Func&lt;DateTime&gt; dateTimeToCheck)
 
-"CheckDecimalCondition":{{site.url}}/2012/12/03-CheckDecimalCondition.html CheckThat(Func&lt;decimal&gt; decimalToCheck)
+"CheckDecimalCondition":{{site.url}}/2012/12/03/CheckDecimalCondition.html CheckThat(Func&lt;decimal&gt; decimalToCheck)
     
-"CheckDoubleCondition":{{site.url}}/2012/12/04-CheckDoubleCondition.html CheckThat(Func&lt;double&gt; doubleToCheck)
+"CheckDoubleCondition":{{site.url}}/2012/12/04/CheckDoubleCondition.html CheckThat(Func&lt;double&gt; doubleToCheck)
     
-"CheckEnumerableOfTCondition&lt;T&gt;":{{site.url}}/2012/12/05-CheckEnumerableOfTCondition-of-T.html CheckThat&lt;T&gt;(Func&lt;IEnumerable&lt;T&gt;&gt; enumerableToCheck)
+"CheckEnumerableOfTCondition&lt;T&gt;":{{site.url}}/2012/12/05/CheckEnumerableOfTCondition-of-T.html CheckThat&lt;T&gt;(Func&lt;IEnumerable&lt;T&gt;&gt; enumerableToCheck)
     
-"CheckIntegerCondition":{{site.url}}/2012/12/06-CheckIntegerCondition.html CheckThat(Func&lt;int&gt; integerToCheck)
+"CheckIntegerCondition":{{site.url}}/2012/12/06/CheckIntegerCondition.html CheckThat(Func&lt;int&gt; integerToCheck)
 
-"CheckObjectCondition":{{site.url}}/2012/12/07-CheckObjectCondition.html CheckThat(Func&lt;object&gt; objectToCheck)
+"CheckObjectCondition":{{site.url}}/2012/12/07/CheckObjectCondition.html CheckThat(Func&lt;object&gt; objectToCheck)
 
-"CheckNameValueCollectionCondition":{{site.url}}/2012/12/08-CheckNameValueCollectionCondition.html CheckThat(Func&lt;NameValueCollection&gt; 
+"CheckNameValueCollectionCondition":{{site.url}}/2012/12/08/CheckNameValueCollectionCondition.html CheckThat(Func&lt;NameValueCollection&gt; 
 
-"CheckStringCondition":{{site.url}}/2012/12/09-CheckStringCondition.html CheckThat(Func&lt;string&gt; stringToCheck)
+"CheckStringCondition":{{site.url}}/2012/12/09/CheckStringCondition.html CheckThat(Func&lt;string&gt; stringToCheck)
 
-"CheckXmlNodeCondition":{{site.url}}/2012/12/10-CheckXmlNodeCondition.html CheckThat(Func&lt;XmlNode&gt; nodeToCheck)
+"CheckXmlNodeCondition":{{site.url}}/2012/12/10/CheckXmlNodeCondition.html CheckThat(Func&lt;XmlNode&gt; nodeToCheck)
 
 h3. Methods inherit from ExceptionThrower
 
@@ -31,7 +31,7 @@ void ThrowFirst()
 __Throws the first Exception found during validation__
 
 void Throw()
-__Throw the "ErrorsCollectionException":{{site.url}}/2012-12-11-ErrorsCollectionException.html if at least one error is found during validation__
+__Throw the "ErrorsCollectionException":{{site.url}}/2012-12-11/ErrorsCollectionException.html if at least one error is found during validation__
 
 void Throw&lt;E&gt;:(object[] exceptionArguments) where E : Exception
 __Throw Exception of type E if at least one error is found during validation__

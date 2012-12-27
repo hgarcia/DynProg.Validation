@@ -8,7 +8,7 @@ Inherits from <span class="code">Exception</span>
 
 h3. Properties
 
-IDictionary<string,List<Exception>> ErrorsCollection
+IDictionary&lt;string,List&lt;Exception&gt;&gt; ErrorsCollection
 __Read only__
 
 h3. Methods
