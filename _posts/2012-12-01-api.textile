@@ -31,9 +31,10 @@ void ThrowFirst()
 __Throws the first Exception found during validation__
 
 void Throw()
-__Throw the "ErrorsCollectionException":{{site.url}}/2012-12-11/ErrorsCollectionException.html if at least one error is found during validation__
+__Throw the "ErrorsCollectionException":{{site.url}}/2012/12/11/ErrorsCollectionException.html if at least one error is found during validation__
 
 void Throw&lt;E&gt;:(object[] exceptionArguments) where E : Exception
 __Throw Exception of type E if at least one error is found during validation__
 
-"ErrorsCollectionException":{{site.url}}/2012-12-11-ErrorsCollectionException.html List()
+"ErrorsCollectionException":{{site.url}}/2012/12/11/ErrorsCollectionException.html List()
+__Return the ErrorsCollectionException that contains a list of errors. If there are no errors ErrorsCollectionException will be returned but with an empty List of errors__ 
